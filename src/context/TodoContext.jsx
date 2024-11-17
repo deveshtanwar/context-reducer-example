@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import PropTypes from "prop-types";
 
 // define reducers
 
@@ -41,4 +42,8 @@ export const TodoProvider = ({ children }) => {
             {children}
         </TodoContext.Provider>
     )
+}
+
+TodoProvider.propTypes = {
+    children: PropTypes.node.isRequired
 }
